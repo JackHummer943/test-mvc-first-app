@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import ru.orlov.test_rest_service.model.Request;
 import ru.orlov.test_rest_service.model.Response;
+import ru.orlov.test_rest_service.service.Executor;
+
 
 @RestController
 public class MyController {
@@ -25,7 +27,6 @@ public class MyController {
             System.out.println(request.getUid());
             System.out.println(response.getCode());
         }
-
         return new ResponseEntity<>(response, HttpStatus.OK);
 
     }
